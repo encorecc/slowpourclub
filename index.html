@@ -7,16 +7,58 @@
   <meta name="description" content="Slow Pour Club is a neighborhood cafe for hand-poured coffee, house-baked pastries and unhurried afternoons.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
 </head>
 <body>
+  <!-- Logo sprite: dripper art, simplified mark and full badge (color via currentColor) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="sp-dripper" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 14)">
+        <path d="M146 98 h108 l-30 66 h-48 z"/>
+        <path d="M144 98 h112" stroke-width="9"/>
+        <path d="M166 104 l20 56 M183 104 l10 56 M200 104 v56 M217 104 l-10 56 M234 104 l-20 56" stroke-width="4"/>
+        <path d="M246 110 c22 -6 34 8 28 22 c-5 11 -18 15 -36 23"/>
+        <ellipse cx="200" cy="172" rx="50" ry="6"/>
+        <path d="M166 182 h68 v80 a12 12 0 0 1 -12 12 h-44 a12 12 0 0 1 -12 -12 z"/>
+        <path d="M234 196 h12 a16 16 0 0 1 16 16 v22 a16 16 0 0 1 -16 16 h-12"/>
+        <path fill="currentColor" stroke="none" d="M169 236 q15.5 -7 31 0 t31 0 v26 a9 9 0 0 1 -9 9 h-44 a9 9 0 0 1 -9 -9 z"/>
+        <path fill="currentColor" stroke="none" d="M200 199 c6 8 9 13 9 17 a9 9 0 0 1 -18 0 c0 -4 3 -9 9 -17z"/>
+      </g>
+      <g id="sp-sakura" fill="currentColor">
+        <path id="sp-petal" d="M0 -2 C-5 -5 -5 -11 -2 -12.5 L0 -10.5 L2 -12.5 C5 -11 5 -5 0 -2z"/>
+        <use href="#sp-petal" transform="rotate(72)"/>
+        <use href="#sp-petal" transform="rotate(144)"/>
+        <use href="#sp-petal" transform="rotate(216)"/>
+        <use href="#sp-petal" transform="rotate(288)"/>
+      </g>
+      <path id="sp-arc-top" d="M52 200 A148 148 0 0 1 348 200"/>
+      <path id="sp-arc-bottom" d="M28 200 A172 172 0 0 0 372 200"/>
+    </defs>
+    <symbol id="sp-mark" viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="184" fill="none" stroke="currentColor" stroke-width="18" style="fill: var(--badge-fill, none)"/>
+      <use href="#sp-dripper" transform="translate(200 200) scale(1.45) translate(-200 -200)"/>
+    </symbol>
+    <symbol id="sp-badge" viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" stroke-width="10" style="fill: var(--badge-fill, none)"/>
+      <circle cx="200" cy="200" r="128" fill="none" stroke="currentColor" stroke-width="7"/>
+      <use href="#sp-dripper"/>
+      <text fill="currentColor" font-family="Rubik, sans-serif" font-weight="800" font-size="42" letter-spacing="1">
+        <textPath href="#sp-arc-top" startOffset="50%" text-anchor="middle">SLOW POUR CLUB</textPath>
+      </text>
+      <text fill="currentColor" font-family="Rubik, sans-serif" font-weight="700" font-size="21" letter-spacing="1.5">
+        <textPath href="#sp-arc-bottom" startOffset="50%" text-anchor="middle">A LITTLE PAUSE, A PERFECT POUR</textPath>
+      </text>
+      <use href="#sp-sakura" transform="translate(42 222) scale(1.1)"/>
+      <use href="#sp-sakura" transform="translate(358 222) scale(1.1)"/>
+    </symbol>
+  </svg>
 
   <header class="nav" id="top">
     <div class="container nav__inner">
       <a href="#top" class="logo" aria-label="Slow Pour Club home">
-        <span class="logo__mark">SP</span>
+        <svg class="logo__mark" aria-hidden="true"><use href="#sp-mark"/></svg>
         <span class="logo__text">Slow Pour Club</span>
       </a>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
@@ -37,7 +79,7 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy reveal">
-          <p class="eyebrow">Neighborhood coffee house · Est. 2026</p>
+          <p class="eyebrow">A little pause, a perfect pour</p>
           <h1>Good coffee<br>takes <em>time.</em></h1>
           <p class="lead">Hand-poured filters, silky lattes and pastries baked every morning. Pull up a chair — nobody's rushing you here.</p>
           <div class="hero__cta">
@@ -48,18 +90,7 @@
         </div>
         <div class="hero__art reveal" aria-hidden="true">
           <div class="blob"></div>
-          <svg class="cup" viewBox="0 0 240 240">
-            <g class="steam" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
-              <path d="M95 70 q-12 -18 0 -36 q12 -18 0 -30"/>
-              <path d="M125 70 q-12 -18 0 -36 q12 -18 0 -30"/>
-              <path d="M155 70 q-12 -18 0 -36 q12 -18 0 -30"/>
-            </g>
-            <path d="M55 90 h150 v40 a75 75 0 0 1 -150 0 z" fill="var(--cream)" stroke="var(--ink)" stroke-width="6"/>
-            <path d="M205 105 h12 a22 22 0 0 1 0 44 h-18" fill="none" stroke="var(--ink)" stroke-width="6"/>
-            <ellipse cx="130" cy="92" rx="73" ry="10" fill="var(--coffee)" stroke="var(--ink)" stroke-width="6"/>
-            <path d="M118 90 q12 -10 24 0 q-12 8 -24 0z" fill="var(--cream)"/>
-            <ellipse cx="130" cy="218" rx="95" ry="10" fill="var(--ink)" opacity=".12"/>
-          </svg>
+          <svg class="hero__badge" viewBox="0 0 400 400" role="img" aria-label="Slow Pour Club badge: a little pause, a perfect pour"><use href="#sp-badge"/></svg>
           <div class="sticker sticker--1">Fresh<br>daily</div>
           <div class="sticker sticker--2">♥ Oat milk<br>at no extra</div>
         </div>
@@ -231,8 +262,8 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div>
-        <a href="#top" class="logo logo--light"><span class="logo__mark">SP</span><span class="logo__text">Slow Pour Club</span></a>
-        <p>Good coffee takes time.</p>
+        <a href="#top" class="footer__badge" aria-label="Back to top"><svg viewBox="0 0 400 400" aria-hidden="true"><use href="#sp-badge"/></svg></a>
+        
       </div>
       <nav class="footer__links" aria-label="Social">
         <a href="#">Instagram</a>

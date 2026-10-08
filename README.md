@@ -8,6 +8,7 @@ Open `index.html` in a browser, or run `python3 -m http.server` and visit http:/
 ## Customize
 - **Text, menu & prices** – `index.html`
 - **Colors & fonts** – CSS variables at the top of `styles.css`
+- **Logo** – the badge and simplified mark are inline SVG symbols (`#sp-badge`, `#sp-mark`) at the top of `index.html`; they take the CSS `color` of their container. `assets/logo-mark.svg` is the favicon
 - **Opening hours** – update both the `HOURS` object in `script.js` (drives the "Open now" badge) and the hours table in `index.html`
 - **Photos** – the `.photo` blocks are gradient placeholders; drop an `<img>` inside each (or set a `background-image`)
 - **Map** – replace the Google Maps embed `src` in the Visit section with your address
