@@ -1,64 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Slow Pour Club — Specialty Coffee & Pastries</title>
-  <meta name="description" content="Slow Pour Club is a neighborhood cafe for hand-poured coffee, house-baked pastries and unhurried afternoons.">
+  <title>Slow Pour Club — Japanese-Inspired Home Café in Alexandra, Singapore</title>
+  <meta name="description" content="Slow Pour Club is a Japanese-inspired home café in Alexandra, Singapore. Hand-brewed specialty filter coffee, pick-your-own-mug dine-in and BYO cup discounts.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&family=Rubik:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo-mark.png" type="image/png">
 </head>
 <body>
-  <!-- Logo sprite: dripper art, simplified mark and full badge (color via currentColor) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <g id="sp-dripper" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(0 14)">
-        <path d="M146 98 h108 l-30 66 h-48 z"/>
-        <path d="M144 98 h112" stroke-width="9"/>
-        <path d="M166 104 l20 56 M183 104 l10 56 M200 104 v56 M217 104 l-10 56 M234 104 l-20 56" stroke-width="4"/>
-        <path d="M246 110 c22 -6 34 8 28 22 c-5 11 -18 15 -36 23"/>
-        <ellipse cx="200" cy="172" rx="50" ry="6"/>
-        <path d="M166 182 h68 v80 a12 12 0 0 1 -12 12 h-44 a12 12 0 0 1 -12 -12 z"/>
-        <path d="M234 196 h12 a16 16 0 0 1 16 16 v22 a16 16 0 0 1 -16 16 h-12"/>
-        <path fill="currentColor" stroke="none" d="M169 236 q15.5 -7 31 0 t31 0 v26 a9 9 0 0 1 -9 9 h-44 a9 9 0 0 1 -9 -9 z"/>
-        <path fill="currentColor" stroke="none" d="M200 199 c6 8 9 13 9 17 a9 9 0 0 1 -18 0 c0 -4 3 -9 9 -17z"/>
-      </g>
-      <g id="sp-sakura" fill="currentColor">
-        <path id="sp-petal" d="M0 -2 C-5 -5 -5 -11 -2 -12.5 L0 -10.5 L2 -12.5 C5 -11 5 -5 0 -2z"/>
-        <use href="#sp-petal" transform="rotate(72)"/>
-        <use href="#sp-petal" transform="rotate(144)"/>
-        <use href="#sp-petal" transform="rotate(216)"/>
-        <use href="#sp-petal" transform="rotate(288)"/>
-      </g>
-      <path id="sp-arc-top" d="M52 200 A148 148 0 0 1 348 200"/>
-      <path id="sp-arc-bottom" d="M28 200 A172 172 0 0 0 372 200"/>
-    </defs>
-    <symbol id="sp-mark" viewBox="0 0 400 400">
-      <circle cx="200" cy="200" r="184" fill="none" stroke="currentColor" stroke-width="18" style="fill: var(--badge-fill, none)"/>
-      <use href="#sp-dripper" transform="translate(200 200) scale(1.45) translate(-200 -200)"/>
-    </symbol>
-    <symbol id="sp-badge" viewBox="0 0 400 400">
-      <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" stroke-width="10" style="fill: var(--badge-fill, none)"/>
-      <circle cx="200" cy="200" r="128" fill="none" stroke="currentColor" stroke-width="7"/>
-      <use href="#sp-dripper"/>
-      <text fill="currentColor" font-family="Rubik, sans-serif" font-weight="800" font-size="42" letter-spacing="1">
-        <textPath href="#sp-arc-top" startOffset="50%" text-anchor="middle">SLOW POUR CLUB</textPath>
-      </text>
-      <text fill="currentColor" font-family="Rubik, sans-serif" font-weight="700" font-size="21" letter-spacing="1.5">
-        <textPath href="#sp-arc-bottom" startOffset="50%" text-anchor="middle">A LITTLE PAUSE, A PERFECT POUR</textPath>
-      </text>
-      <use href="#sp-sakura" transform="translate(42 222) scale(1.1)"/>
-      <use href="#sp-sakura" transform="translate(358 222) scale(1.1)"/>
-    </symbol>
-  </svg>
 
   <header class="nav" id="top">
     <div class="container nav__inner">
       <a href="#top" class="logo" aria-label="Slow Pour Club home">
-        <svg class="logo__mark" aria-hidden="true"><use href="#sp-mark"/></svg>
+        <img class="logo__mark" src="assets/logo-mark.png" alt="" width="44" height="44">
         <span class="logo__text">Slow Pour Club</span>
       </a>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
@@ -66,10 +24,10 @@
       </button>
       <nav class="nav__links" id="nav-links">
         <a href="#about">Our Story</a>
+        <a href="#mug">Pick a Mug</a>
         <a href="#menu">Menu</a>
-        <a href="#gallery">Moments</a>
         <a href="#visit">Visit</a>
-        <a href="#visit" class="btn btn--small">Find Us</a>
+        <a href="#visit" class="btn btn--small">Find Our Hideout</a>
       </nav>
     </div>
   </header>
@@ -79,48 +37,76 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy reveal">
-          <p class="eyebrow">A little pause, a perfect pour</p>
-          <h1>Good coffee<br>takes <em>time.</em></h1>
-          <p class="lead">Hand-poured filters, silky lattes and pastries baked every morning. Pull up a chair — nobody's rushing you here.</p>
+          <p class="eyebrow">Japanese-inspired home café · Alexandra, Singapore</p>
+          <h1>A little pause,<br>a perfect <em>pour.</em></h1>
+          <p class="lead">Hand-brewed specialty filter coffee in a cosy hideout tucked into Alexandra's HDB heartlands. Pick your mug, slow down and stay a while.</p>
           <div class="hero__cta">
             <a href="#menu" class="btn">See the Menu</a>
             <a href="#visit" class="btn btn--ghost">Plan a Visit</a>
           </div>
           <p class="status" id="open-status" aria-live="polite"></p>
         </div>
-        <div class="hero__art reveal" aria-hidden="true">
-          <div class="blob"></div>
-          <svg class="hero__badge" viewBox="0 0 400 400" role="img" aria-label="Slow Pour Club badge: a little pause, a perfect pour"><use href="#sp-badge"/></svg>
-          <div class="sticker sticker--1">Fresh<br>daily</div>
-          <div class="sticker sticker--2">♥ Oat milk<br>at no extra</div>
+        <div class="hero__art reveal">
+          <div class="blob" aria-hidden="true"></div>
+          <img class="hero__badge" src="assets/logo-badge.png" alt="Slow Pour Club badge — a little pause, a perfect pour" width="829" height="837">
+          <div class="sticker sticker--1" aria-hidden="true">Pick<br>your mug</div>
+          <div class="sticker sticker--2" aria-hidden="true">BYO cup<br>S$0.50 off</div>
         </div>
       </div>
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span>Pour-over</span><span>✺</span><span>Flat white</span><span>✺</span><span>Matcha</span><span>✺</span><span>Croissants</span><span>✺</span><span>Basque cheesecake</span><span>✺</span>
-          <span>Pour-over</span><span>✺</span><span>Flat white</span><span>✺</span><span>Matcha</span><span>✺</span><span>Croissants</span><span>✺</span><span>Basque cheesecake</span><span>✺</span>
+          <span>Pour-over</span><span>✿</span><span>Hojicha latte</span><span>✿</span><span>Pick your mug</span><span>✿</span><span>Matcha</span><span>✿</span><span>Hidden gem in Alexandra</span><span>✿</span>
+          <span>Pour-over</span><span>✿</span><span>Hojicha latte</span><span>✿</span><span>Pick your mug</span><span>✿</span><span>Matcha</span><span>✿</span><span>Hidden gem in Alexandra</span><span>✿</span>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT / USP -->
     <section class="section about" id="about">
-      <div class="container about__inner">
-        <div class="about__img reveal">
-          <div class="photo photo--tall" style="--hue: 28">
-            <span>Our bar</span>
+      <div class="container">
+        <div class="about__intro reveal">
+          <p class="eyebrow">Our story</p>
+          <h2>Not just coffee.<br>A slower way to enjoy it.</h2>
+          <p>Slow Pour Club is about slowing down, discovering unique flavours and making every cup a personal experience. We're a small home café, so we keep things simple: a few signature drinks, done carefully, at prices that feel fair.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar__num">01</span>
+            <h3>Specialty filter coffee, crafted with care</h3>
+            <p>Carefully selected beans with distinctive flavour profiles, hand-brewed pour-over by pour-over. Slow brewing is the whole point.</p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__num">02</span>
+            <h3>Pick your mug, personalise your experience</h3>
+            <p>Dine in and choose your favourite from our curated shelf of Japanese-inspired ceramics. No two visits look the same.</p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__num">03</span>
+            <h3>A Japanese-inspired neighbourhood hideout</h3>
+            <p>A cosy, intimate space in Alexandra's HDB heartlands. A quiet escape from the city's hustle, just around the corner.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PICK YOUR MUG -->
+    <section class="section mug" id="mug">
+      <div class="container mug__inner">
+        <div class="mug__img reveal">
+          <div class="photo photo--tall" style="--hue: 12">
+            <span>Our mug shelf</span>
           </div>
         </div>
-        <div class="about__copy reveal">
-          <p class="eyebrow">Our story</p>
-          <h2>A small cafe for slow mornings.</h2>
-          <p>Slow Pour Club started with one kettle, one dripper and the idea that coffee tastes better when you take your time with it. We roast in small batches with farms we know by name, and we brew every cup to order.</p>
-          <p>Come in for a quick espresso or stay all afternoon. The Wi-Fi is fast, the chairs are comfortable, and there's always something warm out of the oven.</p>
-          <ul class="features">
-            <li><span>☕</span><div><strong>Single-origin beans</strong>Rotating seasonal roasts</div></li>
-            <li><span>🥐</span><div><strong>Baked in-house</strong>Every morning from 6am</div></li>
-            <li><span>🌿</span><div><strong>Plant-based options</strong>Oat, almond &amp; soy free</div></li>
-          </ul>
+        <div class="mug__copy reveal">
+          <p class="eyebrow">Dine-in ritual</p>
+          <h2>Every cup gets its own mug.</h2>
+          <p class="muted">Choosing a mug is half the fun. Here's how a visit with us goes:</p>
+          <ol class="steps">
+            <li><strong>Choose your brew</strong>Ask what's on pour-over this week, or go for a hojicha or matcha latte.</li>
+            <li><strong>Pick a mug from the shelf</strong>Handmade, Japanese-inspired ceramics. Pick the one that matches your mood.</li>
+            <li><strong>Slow down &amp; snap a photo</strong>Stay a while. If you post it, tag <a href="https://instagram.com/slowpourclub">@slowpourclub</a> so we can see it.</li>
+          </ol>
+          <p class="note">🌿 Taking away? Bring your own cup and get <strong>S$0.50 off</strong> any drink.</p>
         </div>
       </div>
     </section>
@@ -129,57 +115,53 @@
     <section class="section menu" id="menu">
       <div class="container">
         <div class="section__head reveal">
-          <p class="eyebrow">What we serve</p>
-          <h2>The Menu</h2>
+          <p class="eyebrow">A small, curated menu</p>
+          <h2>A few things, done well.</h2>
         </div>
 
         <div class="tabs reveal" role="tablist" aria-label="Menu categories">
-          <button role="tab" aria-selected="true" aria-controls="tab-coffee" id="t-coffee">Coffee</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-notcoffee" id="t-notcoffee" tabindex="-1">Not Coffee</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-bakes" id="t-bakes" tabindex="-1">Bakes</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-brunch" id="t-brunch" tabindex="-1">Brunch</button>
+          <button role="tab" aria-selected="true" aria-controls="tab-filter" id="t-filter">Filter Coffee</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-milk" id="t-milk" tabindex="-1">Milk &amp; Matcha</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bites" id="t-bites" tabindex="-1">Bites</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bundles" id="t-bundles" tabindex="-1">Bundles</button>
         </div>
 
-        <div class="menu__panel" role="tabpanel" id="tab-coffee" aria-labelledby="t-coffee">
+        <div class="menu__panel" role="tabpanel" id="tab-filter" aria-labelledby="t-filter">
           <ul class="menu__list">
-            <li><div><h3>Espresso</h3><p>Our house blend — chocolate, cherry, brown sugar</p></div><span class="price">$3.5</span></li>
-            <li><div><h3>Flat White</h3><p>Double ristretto, velvety steamed milk</p></div><span class="price">$5</span></li>
-            <li><div><h3>Hand Pour-Over <span class="tag">Signature</span></h3><p>Ask about today's single origin, brewed by V60</p></div><span class="price">$6.5</span></li>
-            <li><div><h3>Café Latte</h3><p>Hot or iced, any milk</p></div><span class="price">$5.5</span></li>
-            <li><div><h3>Honey Oat Cappuccino</h3><p>Local wildflower honey, oat milk, cinnamon</p></div><span class="price">$6</span></li>
-            <li><div><h3>Cold Brew</h3><p>Steeped 18 hours, served over big ice</p></div><span class="price">$5.5</span></li>
+            <li><div><h3>Pour-Over of the Week <span class="tag">Signature</span></h3><p>Rotating single origin, hand-brewed. Ask us about its flavour notes</p></div><span class="price">S$6</span></li>
+            <li><div><h3>Iced Pour-Over</h3><p>Flash-brewed over ice, bright and clean</p></div><span class="price">S$6.5</span></li>
+            <li><div><h3>Tasting Flight</h3><p>Two origins side by side, to compare and find your favourite</p></div><span class="price">S$10</span></li>
+            <li><div><h3>Kyoto-Style Cold Brew</h3><p>Slow-dripped, smooth and chocolatey</p></div><span class="price">S$5.5</span></li>
           </ul>
         </div>
 
-        <div class="menu__panel" role="tabpanel" id="tab-notcoffee" aria-labelledby="t-notcoffee" hidden>
+        <div class="menu__panel" role="tabpanel" id="tab-milk" aria-labelledby="t-milk" hidden>
           <ul class="menu__list">
-            <li><div><h3>Ceremonial Matcha Latte</h3><p>Stone-ground Uji matcha, whisked to order</p></div><span class="price">$6</span></li>
-            <li><div><h3>Hojicha Latte</h3><p>Roasted green tea, toasty and mellow</p></div><span class="price">$5.5</span></li>
-            <li><div><h3>Rich Hot Chocolate <span class="tag">Kid-friendly</span></h3><p>70% dark chocolate, whipped cream</p></div><span class="price">$5</span></li>
-            <li><div><h3>Sparkling Yuzu</h3><p>Yuzu, honey, soda, mint</p></div><span class="price">$5.5</span></li>
-            <li><div><h3>Loose-Leaf Tea</h3><p>Earl grey, jasmine, chamomile or oolong</p></div><span class="price">$4.5</span></li>
+            <li><div><h3>Café Latte</h3><p>Hot or iced, fresh or oat milk</p></div><span class="price">S$5</span></li>
+            <li><div><h3>Hojicha Latte <span class="tag">Fan favourite</span></h3><p>Roasted Japanese green tea, toasty and mellow</p></div><span class="price">S$5.5</span></li>
+            <li><div><h3>Matcha Latte</h3><p>Stone-ground matcha, whisked to order</p></div><span class="price">S$6</span></li>
+            <li><div><h3>Kuromitsu Oat Latte</h3><p>Okinawan black sugar syrup, espresso, oat milk</p></div><span class="price">S$6</span></li>
           </ul>
         </div>
 
-        <div class="menu__panel" role="tabpanel" id="tab-bakes" aria-labelledby="t-bakes" hidden>
+        <div class="menu__panel" role="tabpanel" id="tab-bites" aria-labelledby="t-bites" hidden>
           <ul class="menu__list">
-            <li><div><h3>Butter Croissant</h3><p>72-hour laminated dough</p></div><span class="price">$4.5</span></li>
-            <li><div><h3>Basque Burnt Cheesecake <span class="tag">Best seller</span></h3><p>Caramelized top, creamy center</p></div><span class="price">$7</span></li>
-            <li><div><h3>Cardamom Bun</h3><p>Swedish-style, pearl sugar</p></div><span class="price">$5</span></li>
-            <li><div><h3>Brown Butter Cookie</h3><p>Sea salt, dark chocolate chunks</p></div><span class="price">$3.5</span></li>
-            <li><div><h3>Seasonal Fruit Tart</h3><p>Whatever's best at the market this week</p></div><span class="price">$6.5</span></li>
+            <li><div><h3>Tamago Sando</h3><p>Fluffy milk bread, creamy Japanese egg</p></div><span class="price">S$6</span></li>
+            <li><div><h3>Matcha Basque Cheesecake</h3><p>Caramelised top, soft matcha centre</p></div><span class="price">S$6.5</span></li>
+            <li><div><h3>Miso Brown Butter Cookie</h3><p>Salty-sweet, chewy, dangerously good with filter coffee</p></div><span class="price">S$3.5</span></li>
+            <li><div><h3>Castella Slice</h3><p>Light Japanese honey sponge</p></div><span class="price">S$4</span></li>
           </ul>
         </div>
 
-        <div class="menu__panel" role="tabpanel" id="tab-brunch" aria-labelledby="t-brunch" hidden>
+        <div class="menu__panel" role="tabpanel" id="tab-bundles" aria-labelledby="t-bundles" hidden>
           <ul class="menu__list">
-            <li><div><h3>Fluffy Soufflé Pancakes</h3><p>Three tall pancakes, whipped butter, maple</p></div><span class="price">$14</span></li>
-            <li><div><h3>Avocado Toast</h3><p>Sourdough, chili crisp, soft egg</p></div><span class="price">$13</span></li>
-            <li><div><h3>Egg Sando</h3><p>Milk bread, creamy egg salad, chives</p></div><span class="price">$11</span></li>
-            <li><div><h3>Granola Bowl</h3><p>House granola, yogurt, berries, honey</p></div><span class="price">$10</span></li>
+            <li><div><h3>Slow Morning</h3><p>Pour-over of the week + tamago sando</p></div><span class="price">S$11</span></li>
+            <li><div><h3>Afternoon Pause</h3><p>Any latte + matcha basque cheesecake</p></div><span class="price">S$10.5</span></li>
+            <li><div><h3>Cookie Break</h3><p>Any drink + miso brown butter cookie</p></div><span class="price">+S$3</span></li>
+            <li><div><h3>Pair for Two</h3><p>Two drinks + two bites, perfect for weekend catch-ups</p></div><span class="price">S$20</span></li>
           </ul>
-          <p class="menu__note">Brunch served until 2pm daily.</p>
         </div>
+        <p class="menu__note">Beans rotate regularly, so ask what's brewing. BYO cup: S$0.50 off any takeaway drink.</p>
       </div>
     </section>
 
@@ -187,26 +169,24 @@
     <section class="section gallery" id="gallery">
       <div class="container">
         <div class="section__head reveal">
-          <p class="eyebrow">@slowpourclub</p>
+          <p class="eyebrow"><a href="https://instagram.com/slowpourclub">@slowpourclub</a></p>
           <h2>Little moments</h2>
         </div>
         <div class="gallery__grid">
-          <div class="photo reveal" style="--hue: 32"><span>Latte art</span></div>
-          <div class="photo photo--wide reveal" style="--hue: 18"><span>Morning light</span></div>
-          <div class="photo reveal" style="--hue: 40"><span>Croissants</span></div>
+          <div class="photo reveal" style="--hue: 14"><span>The mug shelf</span></div>
+          <div class="photo photo--wide reveal" style="--hue: 24"><span>The slow pour</span></div>
           <div class="photo reveal" style="--hue: 95"><span>Matcha</span></div>
-          <div class="photo reveal" style="--hue: 10"><span>Cheesecake</span></div>
-          <div class="photo photo--wide reveal" style="--hue: 25"><span>The pour</span></div>
+          <div class="photo reveal" style="--hue: 30"><span>Hojicha latte</span></div>
+          <div class="photo reveal" style="--hue: 42"><span>Tamago sando</span></div>
+          <div class="photo photo--wide reveal" style="--hue: 350"><span>Our cosy corner</span></div>
         </div>
       </div>
     </section>
 
-    <!-- QUOTES -->
+    <!-- MANIFESTO -->
     <section class="section quotes">
-      <div class="container quotes__grid">
-        <blockquote class="reveal">“The pour-over here ruined every other coffee for me.”<cite>— Regular since day one</cite></blockquote>
-        <blockquote class="reveal">“Cozy, calm and the cheesecake is unreal.”<cite>— Weekend visitor</cite></blockquote>
-        <blockquote class="reveal">“My favorite place to read on a Sunday.”<cite>— Neighbor</cite></blockquote>
+      <div class="container">
+        <blockquote class="manifesto reveal">“Slow Pour Club isn't just about drinking coffee. It's about slowing down, discovering unique flavours and making every cup a personal experience.”</blockquote>
       </div>
     </section>
 
@@ -215,62 +195,58 @@
       <div class="container visit__inner">
         <div class="visit__card reveal">
           <p class="eyebrow">Come say hi</p>
-          <h2>Visit us</h2>
+          <h2>Find our hideout</h2>
           <div class="visit__block">
-            <h3>Address</h3>
-            <p>123 Example Street<br>Your City, 00000</p>
+            <h3>Where</h3>
+            <p>Alexandra, Singapore<br><span class="muted">We're a home café tucked inside an HDB block, so DM us on Instagram for the exact unit.</span></p>
           </div>
           <div class="visit__block">
             <h3>Hours</h3>
             <table class="hours" id="hours">
-              <tr data-day="1"><td>Monday</td><td>7:00 – 17:00</td></tr>
-              <tr data-day="2"><td>Tuesday</td><td>7:00 – 17:00</td></tr>
-              <tr data-day="3"><td>Wednesday</td><td>7:00 – 17:00</td></tr>
-              <tr data-day="4"><td>Thursday</td><td>7:00 – 17:00</td></tr>
-              <tr data-day="5"><td>Friday</td><td>7:00 – 18:00</td></tr>
-              <tr data-day="6"><td>Saturday</td><td>8:00 – 18:00</td></tr>
-              <tr data-day="0"><td>Sunday</td><td>8:00 – 16:00</td></tr>
+              <tr data-day="1"><td>Monday</td><td>Closed</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>Closed</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>7:30 – 13:00</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>7:30 – 13:00</td></tr>
+              <tr data-day="5"><td>Friday</td><td>7:30 – 13:00</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>9:00 – 17:00</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>9:00 – 17:00</td></tr>
             </table>
+            <p class="muted small">Weekends get busy, so come early or expect a short wait.</p>
           </div>
           <div class="visit__block">
             <h3>Contact</h3>
-            <p><a href="mailto:hello@slowpour.club">hello@slowpour.club</a><br><a href="tel:+10000000000">(000) 000-0000</a></p>
+            <p><a href="https://instagram.com/slowpourclub">Instagram @slowpourclub</a><br><a href="mailto:hello@slowpourclub.sg">hello@slowpourclub.sg</a></p>
           </div>
         </div>
         <div class="visit__map reveal">
-          <iframe title="Map showing cafe location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=coffee&output=embed"></iframe>
+          <iframe title="Map of Alexandra, Singapore" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Alexandra,+Singapore&z=15&output=embed"></iframe>
         </div>
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
+    <!-- SOCIAL -->
     <section class="section newsletter">
       <div class="container newsletter__inner reveal">
-        <h2>Join the club</h2>
-        <p>New roasts, seasonal drinks and the occasional free cookie — straight to your inbox.</p>
-        <form class="newsletter__form" id="newsletter">
-          <label class="sr-only" for="email">Email address</label>
-          <input type="email" id="email" placeholder="you@email.com" required>
-          <button class="btn" type="submit">Subscribe</button>
-        </form>
-        <p class="newsletter__msg" id="newsletter-msg" aria-live="polite"></p>
+        <h2>Follow the slow life</h2>
+        <p>New beans, seasonal drinks, mug drops and opening updates. We post them on Instagram and TikTok first.</p>
+        <div class="social">
+          <a class="btn" href="https://instagram.com/slowpourclub">Instagram</a>
+          <a class="btn btn--light" href="https://www.tiktok.com/@slowpourclub">TikTok</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div>
-        <a href="#top" class="footer__badge" aria-label="Back to top"><svg viewBox="0 0 400 400" aria-hidden="true"><use href="#sp-badge"/></svg></a>
-        
-      </div>
+      <a href="#top" class="footer__badge" aria-label="Back to top"><img src="assets/logo-badge-cream.png" alt="" width="829" height="837"></a>
       <nav class="footer__links" aria-label="Social">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">Google Maps</a>
+        <a href="https://instagram.com/slowpourclub">Instagram</a>
+        <a href="https://www.tiktok.com/@slowpourclub">TikTok</a>
+        <a href="https://www.google.com/maps?q=Alexandra,+Singapore">Google Maps</a>
       </nav>
-      <p class="footer__copy">© <span id="year"></span> Slow Pour Club. All rights reserved.</p>
+      <p class="footer__copy">© <span id="year"></span> Slow Pour Club · Alexandra, Singapore</p>
     </div>
   </footer>
 

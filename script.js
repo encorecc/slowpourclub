@@ -1,13 +1,15 @@
-// Opening hours: [open, close] in 24h decimal, keyed by day (0 = Sunday)
+// Opening hours: [open, close] in 24h decimal (7.5 = 7:30am), keyed by day (0 = Sunday).
+// null = closed. Keep in sync with the hours table in index.html.
 const HOURS = {
-  0: [8, 16],
-  1: [7, 17],
-  2: [7, 17],
-  3: [7, 17],
-  4: [7, 17],
-  5: [7, 18],
-  6: [8, 18],
+  0: [9, 17],
+  1: null,
+  2: null,
+  3: [7.5, 13],
+  4: [7.5, 13],
+  5: [7.5, 13],
+  6: [9, 17],
 };
+const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 const nav = document.querySelector('.nav');
 const toggle = document.querySelector('.nav__toggle');
@@ -58,20 +60,32 @@ function formatHour(h) {
   return min ? `${display}:${String(min).padStart(2, '0')}${suffix}` : `${display}${suffix}`;
 }
 
+function nextOpening(day, time) {
+  for (let offset = 0; offset < 7; offset++) {
+    const d = (day + offset) % 7;
+    const hours = HOURS[d];
+    if (hours && (offset > 0 || time < hours[0])) {
+      const when = offset === 0 ? 'today' : offset === 1 ? 'tomorrow' : DAY_NAMES[d];
+      return `${when} at ${formatHour(hours[0])}`;
+    }
+  }
+  return null;
+}
+
 function updateStatus() {
-  const now = new Date();
+  // Always use Singapore time, wherever the visitor is
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Singapore' }));
   const day = now.getDay();
   const time = now.getHours() + now.getMinutes() / 60;
-  const [open, close] = HOURS[day];
+  const today = HOURS[day];
   const status = document.getElementById('open-status');
 
-  if (time >= open && time < close) {
-    status.textContent = `Open now · until ${formatHour(close)}`;
+  if (today && time >= today[0] && time < today[1]) {
+    status.textContent = `Open now · until ${formatHour(today[1])}`;
     status.classList.remove('is-closed');
   } else {
-    const opensToday = time < open;
-    const nextOpen = opensToday ? open : HOURS[(day + 1) % 7][0];
-    status.textContent = `Closed · opens ${opensToday ? 'today' : 'tomorrow'} at ${formatHour(nextOpen)}`;
+    const next = nextOpening(day, time);
+    status.textContent = next ? `Closed · opens ${next}` : 'Closed';
     status.classList.add('is-closed');
   }
 
@@ -94,13 +108,5 @@ const observer = new IntersectionObserver(
   { threshold: 0.12 }
 );
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-// Newsletter (front-end only — connect to your email provider)
-document.getElementById('newsletter').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const input = document.getElementById('email');
-  document.getElementById('newsletter-msg').textContent = `Thanks! We'll be in touch at ${input.value} ☕`;
-  input.value = '';
-});
 
 document.getElementById('year').textContent = new Date().getFullYear();
