@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slow Pour Club — Specialty Coffee & Pastries</title>
+  <meta name="description" content="Slow Pour Club is a neighborhood cafe for hand-poured coffee, house-baked pastries and unhurried afternoons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+</head>
+<body>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Slow Pour Club home">
+        <span class="logo__mark">SP</span>
+        <span class="logo__text">Slow Pour Club</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" id="nav-links">
+        <a href="#about">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Moments</a>
+        <a href="#visit">Visit</a>
+        <a href="#visit" class="btn btn--small">Find Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Neighborhood coffee house · Est. 2026</p>
+          <h1>Good coffee<br>takes <em>time.</em></h1>
+          <p class="lead">Hand-poured filters, silky lattes and pastries baked every morning. Pull up a chair — nobody's rushing you here.</p>
+          <div class="hero__cta">
+            <a href="#menu" class="btn">See the Menu</a>
+            <a href="#visit" class="btn btn--ghost">Plan a Visit</a>
+          </div>
+          <p class="status" id="open-status" aria-live="polite"></p>
+        </div>
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="blob"></div>
+          <svg class="cup" viewBox="0 0 240 240">
+            <g class="steam" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+              <path d="M95 70 q-12 -18 0 -36 q12 -18 0 -30"/>
+              <path d="M125 70 q-12 -18 0 -36 q12 -18 0 -30"/>
+              <path d="M155 70 q-12 -18 0 -36 q12 -18 0 -30"/>
+            </g>
+            <path d="M55 90 h150 v40 a75 75 0 0 1 -150 0 z" fill="var(--cream)" stroke="var(--ink)" stroke-width="6"/>
+            <path d="M205 105 h12 a22 22 0 0 1 0 44 h-18" fill="none" stroke="var(--ink)" stroke-width="6"/>
+            <ellipse cx="130" cy="92" rx="73" ry="10" fill="var(--coffee)" stroke="var(--ink)" stroke-width="6"/>
+            <path d="M118 90 q12 -10 24 0 q-12 8 -24 0z" fill="var(--cream)"/>
+            <ellipse cx="130" cy="218" rx="95" ry="10" fill="var(--ink)" opacity=".12"/>
+          </svg>
+          <div class="sticker sticker--1">Fresh<br>daily</div>
+          <div class="sticker sticker--2">♥ Oat milk<br>at no extra</div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Pour-over</span><span>✺</span><span>Flat white</span><span>✺</span><span>Matcha</span><span>✺</span><span>Croissants</span><span>✺</span><span>Basque cheesecake</span><span>✺</span>
+          <span>Pour-over</span><span>✺</span><span>Flat white</span><span>✺</span><span>Matcha</span><span>✺</span><span>Croissants</span><span>✺</span><span>Basque cheesecake</span><span>✺</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <div class="about__img reveal">
+          <div class="photo photo--tall" style="--hue: 28">
+            <span>Our bar</span>
+          </div>
+        </div>
+        <div class="about__copy reveal">
+          <p class="eyebrow">Our story</p>
+          <h2>A small cafe for slow mornings.</h2>
+          <p>Slow Pour Club started with one kettle, one dripper and the idea that coffee tastes better when you take your time with it. We roast in small batches with farms we know by name, and we brew every cup to order.</p>
+          <p>Come in for a quick espresso or stay all afternoon. The Wi-Fi is fast, the chairs are comfortable, and there's always something warm out of the oven.</p>
+          <ul class="features">
+            <li><span>☕</span><div><strong>Single-origin beans</strong>Rotating seasonal roasts</div></li>
+            <li><span>🥐</span><div><strong>Baked in-house</strong>Every morning from 6am</div></li>
+            <li><span>🌿</span><div><strong>Plant-based options</strong>Oat, almond &amp; soy free</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">What we serve</p>
+          <h2>The Menu</h2>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Menu categories">
+          <button role="tab" aria-selected="true" aria-controls="tab-coffee" id="t-coffee">Coffee</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-notcoffee" id="t-notcoffee" tabindex="-1">Not Coffee</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bakes" id="t-bakes" tabindex="-1">Bakes</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-brunch" id="t-brunch" tabindex="-1">Brunch</button>
+        </div>
+
+        <div class="menu__panel" role="tabpanel" id="tab-coffee" aria-labelledby="t-coffee">
+          <ul class="menu__list">
+            <li><div><h3>Espresso</h3><p>Our house blend — chocolate, cherry, brown sugar</p></div><span class="price">$3.5</span></li>
+            <li><div><h3>Flat White</h3><p>Double ristretto, velvety steamed milk</p></div><span class="price">$5</span></li>
+            <li><div><h3>Hand Pour-Over <span class="tag">Signature</span></h3><p>Ask about today's single origin, brewed by V60</p></div><span class="price">$6.5</span></li>
+            <li><div><h3>Café Latte</h3><p>Hot or iced, any milk</p></div><span class="price">$5.5</span></li>
+            <li><div><h3>Honey Oat Cappuccino</h3><p>Local wildflower honey, oat milk, cinnamon</p></div><span class="price">$6</span></li>
+            <li><div><h3>Cold Brew</h3><p>Steeped 18 hours, served over big ice</p></div><span class="price">$5.5</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" role="tabpanel" id="tab-notcoffee" aria-labelledby="t-notcoffee" hidden>
+          <ul class="menu__list">
+            <li><div><h3>Ceremonial Matcha Latte</h3><p>Stone-ground Uji matcha, whisked to order</p></div><span class="price">$6</span></li>
+            <li><div><h3>Hojicha Latte</h3><p>Roasted green tea, toasty and mellow</p></div><span class="price">$5.5</span></li>
+            <li><div><h3>Rich Hot Chocolate <span class="tag">Kid-friendly</span></h3><p>70% dark chocolate, whipped cream</p></div><span class="price">$5</span></li>
+            <li><div><h3>Sparkling Yuzu</h3><p>Yuzu, honey, soda, mint</p></div><span class="price">$5.5</span></li>
+            <li><div><h3>Loose-Leaf Tea</h3><p>Earl grey, jasmine, chamomile or oolong</p></div><span class="price">$4.5</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" role="tabpanel" id="tab-bakes" aria-labelledby="t-bakes" hidden>
+          <ul class="menu__list">
+            <li><div><h3>Butter Croissant</h3><p>72-hour laminated dough</p></div><span class="price">$4.5</span></li>
+            <li><div><h3>Basque Burnt Cheesecake <span class="tag">Best seller</span></h3><p>Caramelized top, creamy center</p></div><span class="price">$7</span></li>
+            <li><div><h3>Cardamom Bun</h3><p>Swedish-style, pearl sugar</p></div><span class="price">$5</span></li>
+            <li><div><h3>Brown Butter Cookie</h3><p>Sea salt, dark chocolate chunks</p></div><span class="price">$3.5</span></li>
+            <li><div><h3>Seasonal Fruit Tart</h3><p>Whatever's best at the market this week</p></div><span class="price">$6.5</span></li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" role="tabpanel" id="tab-brunch" aria-labelledby="t-brunch" hidden>
+          <ul class="menu__list">
+            <li><div><h3>Fluffy Soufflé Pancakes</h3><p>Three tall pancakes, whipped butter, maple</p></div><span class="price">$14</span></li>
+            <li><div><h3>Avocado Toast</h3><p>Sourdough, chili crisp, soft egg</p></div><span class="price">$13</span></li>
+            <li><div><h3>Egg Sando</h3><p>Milk bread, creamy egg salad, chives</p></div><span class="price">$11</span></li>
+            <li><div><h3>Granola Bowl</h3><p>House granola, yogurt, berries, honey</p></div><span class="price">$10</span></li>
+          </ul>
+          <p class="menu__note">Brunch served until 2pm daily.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">@slowpourclub</p>
+          <h2>Little moments</h2>
+        </div>
+        <div class="gallery__grid">
+          <div class="photo reveal" style="--hue: 32"><span>Latte art</span></div>
+          <div class="photo photo--wide reveal" style="--hue: 18"><span>Morning light</span></div>
+          <div class="photo reveal" style="--hue: 40"><span>Croissants</span></div>
+          <div class="photo reveal" style="--hue: 95"><span>Matcha</span></div>
+          <div class="photo reveal" style="--hue: 10"><span>Cheesecake</span></div>
+          <div class="photo photo--wide reveal" style="--hue: 25"><span>The pour</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="section quotes">
+      <div class="container quotes__grid">
+        <blockquote class="reveal">“The pour-over here ruined every other coffee for me.”<cite>— Regular since day one</cite></blockquote>
+        <blockquote class="reveal">“Cozy, calm and the cheesecake is unreal.”<cite>— Weekend visitor</cite></blockquote>
+        <blockquote class="reveal">“My favorite place to read on a Sunday.”<cite>— Neighbor</cite></blockquote>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="section visit" id="visit">
+      <div class="container visit__inner">
+        <div class="visit__card reveal">
+          <p class="eyebrow">Come say hi</p>
+          <h2>Visit us</h2>
+          <div class="visit__block">
+            <h3>Address</h3>
+            <p>123 Example Street<br>Your City, 00000</p>
+          </div>
+          <div class="visit__block">
+            <h3>Hours</h3>
+            <table class="hours" id="hours">
+              <tr data-day="1"><td>Monday</td><td>7:00 – 17:00</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>7:00 – 17:00</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>7:00 – 17:00</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>7:00 – 17:00</td></tr>
+              <tr data-day="5"><td>Friday</td><td>7:00 – 18:00</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>8:00 – 18:00</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>8:00 – 16:00</td></tr>
+            </table>
+          </div>
+          <div class="visit__block">
+            <h3>Contact</h3>
+            <p><a href="mailto:hello@slowpour.club">hello@slowpour.club</a><br><a href="tel:+10000000000">(000) 000-0000</a></p>
+          </div>
+        </div>
+        <div class="visit__map reveal">
+          <iframe title="Map showing cafe location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=coffee&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter">
+      <div class="container newsletter__inner reveal">
+        <h2>Join the club</h2>
+        <p>New roasts, seasonal drinks and the occasional free cookie — straight to your inbox.</p>
+        <form class="newsletter__form" id="newsletter">
+          <label class="sr-only" for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@email.com" required>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter__msg" id="newsletter-msg" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#top" class="logo logo--light"><span class="logo__mark">SP</span><span class="logo__text">Slow Pour Club</span></a>
+        <p>Good coffee takes time.</p>
+      </div>
+      <nav class="footer__links" aria-label="Social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Google Maps</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Slow Pour Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
